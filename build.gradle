@@ -63,19 +63,8 @@ ext {
     extensionProperties = new org.yaml.snakeyaml.Yaml().load(new File("${propertyDirectory}/${extensionPropertyFile}").newInputStream())
     baseSpringProperty = baseProperties.spring
     extensionSpringProperty = extensionProperties.spring
-    baseLBBProperty = baseProperties.lbb
-    extensionLBBProperty = extensionProperties.lbb
-
-    // datasource property
-    baseSpringDatasourceProperty = baseSpringProperty.datasource
-    extensionSpringDatasourceProperty = extensionSpringProperty.datasource
-    baseLBBDatasourceProperty = baseLBBProperty.datasource
-    extensionLBBDatasourceProperty = extensionLBBProperty.datasource
-
-    // module property
-    baseLBBMybatisProperty = baseLBBProperty.mybatis
-    baseLBBFlywayProperty = baseLBBProperty.flyway
-    baseLBBRpmProperty = baseLBBProperty.rpm
+    baseAppProperty = baseProperties.app
+    extensionAppProperty = extensionProperties.app
 
     /* =====================
     value
@@ -84,8 +73,8 @@ ext {
     // application
     applicationName = baseSpringProperty.application.name
     applicationVersion = "ver.${baseSpringProperty.application.version}"
-    packageName = baseLBBProperty.package
-    mainPackage = "${packageName}.${baseLBBProperty.mainClass}"
+    packageName = baseAppProperty.package
+    mainPackage = "${packageName}.${baseAppProperty.mainClass}"
     buildVersion = "${applicationVersion}_${timestamp}"
 }
 

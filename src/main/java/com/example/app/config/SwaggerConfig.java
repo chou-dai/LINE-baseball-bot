@@ -1,4 +1,4 @@
-package com.example.bot.config;
+package com.example.app.config;
 
 import com.google.common.base.Predicate;
 import org.springframework.context.annotation.Bean;

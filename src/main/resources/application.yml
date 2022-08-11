@@ -16,7 +16,7 @@ spring:
   profiles:
     active: sample
   application:
-    name: line-baseball-bot
+    name: sample
     version: 1.2.0_SNAPSHOT
 
 logging:
@@ -26,15 +26,10 @@ logging:
         security: DEBUG  # 本番時には必要であれば変更
     root: DEBUG  # 本番時には必要であれば変更
 
-lbb:
+app:
   buildVersion: "@buildVersion@"
-  package: com.example.bot
+  package: com.example.app
   mainClass: Application
-  datasource:
-    schema: line-baseball-bot
-    host: # application-hoge.yml に要記載
-    port: # application-hoge.yml に要記載
-    option: useSSL=false&allowPublicKeyRetrieval=true
   i18n:
     encoding: UTF-8
     basename: i18n/messages
