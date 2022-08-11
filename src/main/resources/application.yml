@@ -1,0 +1,40 @@
+---
+
+server:
+  port: 8080
+  servlet:
+    contextPath: /
+    session:
+      timeout: 24h
+      cookie:
+        max-age: 24h
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  profiles:
+    active: sample
+  application:
+    name: line-baseball-bot
+    version: 1.2.0_SNAPSHOT
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG  # 本番時には必要であれば変更
+    root: DEBUG  # 本番時には必要であれば変更
+
+lbb:
+  buildVersion: "@buildVersion@"
+  package: com.example.bot
+  mainClass: Application
+  datasource:
+    schema: line-baseball-bot
+    host: # application-hoge.yml に要記載
+    port: # application-hoge.yml に要記載
+    option: useSSL=false&allowPublicKeyRetrieval=true
+  i18n:
+    encoding: UTF-8
+    basename: i18n/messages
