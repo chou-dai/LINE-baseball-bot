@@ -1,7 +1,46 @@
-# Ignore Gradle project-specific cache directory
 .gradle
 
-# Ignore Gradle build output directory
+.idea
+
 build
 
+
+### yml ###
+application-local.yml
+application-test.yml
+
+### Docker Log ###
+/docker/mysql/log/
+/docker/mysql/data/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+### 自動生成ファイル ###
+swagger.json
+
+### Node ###
+frontend/nodejs/
+frontend/npm/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
