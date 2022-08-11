@@ -1,6 +1,6 @@
-package com.example.bot.controller;
+package com.example.app.controller;
 
-import com.example.bot.annotation.IntegrationTest;
+import com.example.app.annotation.IntegrationTest;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.example.bot.controller.api;
+package com.example.app.controller.api;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
